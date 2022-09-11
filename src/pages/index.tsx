@@ -3,11 +3,11 @@ import type { HeadFC } from 'gatsby';
 
 const IndexPage = () => {
   return (
-    <main className="mx-auto max-w-[80%]">
+    <div className="index-page">
       <h1 className="text-3xl font-bold underline text-center">
         Santos Handyman Services
       </h1>
-    </main>
+    </div>
   );
 };
 
