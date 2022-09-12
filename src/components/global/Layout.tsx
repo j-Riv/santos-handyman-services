@@ -6,7 +6,7 @@ export function Layout({ children }: { children: ReactNode }) {
   return (
     <div className="">
       <Header />
-      <main role="main" id="mainContent" className="container mx-auto">
+      <main role="main" id="mainContent">
         {children}
       </main>
       <Footer />

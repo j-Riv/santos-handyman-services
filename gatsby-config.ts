@@ -29,6 +29,9 @@ const config: GatsbyConfig = {
       __key: 'images',
     },
     'gatsby-plugin-postcss',
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     'gatsby-transformer-json',
     {
       resolve: `gatsby-source-filesystem`,

@@ -1,12 +1,15 @@
 import * as React from 'react';
 import type { HeadFC } from 'gatsby';
 
+import { Hero, Services } from '../components';
+
 const IndexPage = () => {
   return (
     <div className="index-page">
-      <h1 className="text-3xl font-bold underline text-center">
-        Santos Handyman Services
-      </h1>
+      <Hero />
+      <div className="container mx-auto">
+        <Services />
+      </div>
     </div>
   );
 };
