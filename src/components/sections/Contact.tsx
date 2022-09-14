@@ -7,18 +7,7 @@ export function Contact() {
         <div className="flex flex-wrap">
           <div className="w-full px-4 text-white bg-sky-700 lg:w-1/2">
             <div className="max-w-[570px] h-full mb-12 lg:mb-0 mx-auto lg:mr-0 lg:ml-auto flex flex-col justify-center">
-              <h2
-                className="
-                  text-dark
-                  mb-6
-                  uppercase
-                  font-semibold
-                  text-[32px]
-                  sm:text-[40px]
-                  lg:text-[36px]
-                  xl:text-[40px]
-                  "
-              >
+              <h2 className="text-dark mb-6 uppercase font-semibold text-[32px] sm:text-[40px] lg:text-[36px] xl:text-[40px]">
                 GET IN TOUCH WITH US
               </h2>
               <p className="text-base leading-relaxed text-body-color mb-9">
@@ -35,75 +24,34 @@ export function Contact() {
                   <input
                     type="text"
                     placeholder="Your Name"
-                    className="
-                        w-full
-                        rounded
-                        py-3
-                        px-[14px]
-                        text-body-color text-base
-                        border border-[f0f0f0]
-                        outline-none
-                        focus-visible:shadow-none
-                        focus:border-primary
-                        "
+                    className="w-full rounded py-3 px-[14px] text-body-color text-base border border-[f0f0f0] outline-none focus-visible:shadow-none focus:border-primary "
                   />
                 </div>
                 <div className="mb-6">
                   <input
                     type="email"
                     placeholder="Your Email"
-                    className="
-                        w-full
-                        rounded
-                        py-3
-                        px-[14px]
-                        text-body-color text-base
-                        border border-[f0f0f0]
-                        outline-none
-                        focus-visible:shadow-none
-                        focus:border-primary
-                        "
+                    className="w-full rounded py-3 px-[14px] text-body-color text-base border border-[f0f0f0] outline-none focus-visible:shadow-none focus:border-primary "
                   />
                 </div>
                 <div className="mb-6">
                   <input
                     type="text"
                     placeholder="Your Phone"
-                    className="
-                        w-full
-                        rounded
-                        py-3
-                        px-[14px]
-                        text-body-color text-base
-                        border border-[f0f0f0]
-                        outline-none
-                        focus-visible:shadow-none
-                        focus:border-primary
-                        "
+                    className="w-full rounded py-3 px-[14px] text-body-color text-base border border-[f0f0f0] outline-none focus-visible:shadow-none focus:border-primary "
                   />
                 </div>
                 <div className="mb-6">
                   <textarea
                     rows={6}
                     placeholder="Your Message"
-                    className="
-                        w-full
-                        rounded
-                        py-3
-                        px-[14px]
-                        text-body-color text-base
-                        border border-[f0f0f0]
-                        resize-none
-                        outline-none
-                        focus-visible:shadow-none
-                        focus:border-primary
-                        "
+                    className="w-full rounded py-3 px-[14px] text-body-color text-base border border-[f0f0f0] resize-none outline-none focus-visible:shadow-none focus:border-primary "
                   ></textarea>
                 </div>
                 <div>
                   <button
                     type="submit"
-                    className="w-full px-4 py-2 mt-4 text-sm text-white transition duration-150 ease-in-out border border-blue-700 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700 bg-sky-700 hover:bg-sky-800 lg:text-xl lg:font-bold sm:px-10 sm:py-4"
+                    className="w-full px-4 py-2 mt-4 text-sm text-white transition duration-150 ease-in-out border rounded border-sky-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700 bg-sky-700 hover:bg-sky-800 lg:text-xl lg:font-bold sm:px-10 sm:py-4"
                   >
                     Send Message
                   </button>
