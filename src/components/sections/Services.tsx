@@ -49,26 +49,26 @@ const services = [
 
 function Card({ service }: { service: { name: string; icon: IconType } }) {
   return (
-    <div className="rounded-md border border-blue-600 flex flex-col gap-4 justify-center items-center p-4 hover:cursor-pointer hover:bg-slate-100">
+    <div className="flex flex-col items-center justify-center gap-4 p-4 border border-blue-600 rounded-md hover:cursor-pointer hover:bg-slate-100">
       <service.icon
         className="flex-1 flex justify-center items-center h-[50px] w-[50px] flex-shrink-0 text-blue-600 fill-sky-700 stroke-sky-700"
         aria-hidden="true"
       />
-      <p className="flex-1 flex justify-center items-center">{service.name}</p>
+      <p className="flex items-center justify-center flex-1">{service.name}</p>
     </div>
   );
 }
 
 function CardV2({ service }: { service: { name: string; icon: IconType } }) {
   return (
-    <div className="drop-shadow-md rounded-md border flex flex-col md:flex-row gap-4 justify-center items-center m-4 hover:cursor-pointer hover:bg-slate-100">
-      <div className="rounded-t-md md:rounded-tl-md md:rounded-bl-md bg-slate-100 flex-1 flex justify-center items-center py-4 w-full">
+    <div className="flex flex-col items-center justify-center gap-4 m-4 border rounded-md drop-shadow-md md:flex-row hover:cursor-pointer hover:bg-slate-100">
+      <div className="flex items-center justify-center flex-1 w-full py-4 rounded-t-md md:rounded-tl-md md:rounded-bl-md bg-slate-100">
         <service.icon
           className="h-[50px] w-[50px] flex-shrink-0 text-blue-600 fill-sky-700 stroke-sky-700"
           aria-hidden="true"
         />
       </div>
-      <p className="flex-1 flex justify-center items-center my-4">
+      <p className="flex items-center justify-center flex-1 my-4">
         {service.name}
       </p>
     </div>
@@ -78,15 +78,15 @@ function CardV2({ service }: { service: { name: string; icon: IconType } }) {
 export function Services() {
   return (
     <section id="services" className="my-10">
-      <h2 className="text-center text-5xl font-semibold uppercase my-4">
+      <h2 className="my-4 text-5xl font-semibold text-center uppercase">
         Services
       </h2>
-      {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mx-4">
+      {/* <div className="grid grid-cols-2 gap-6 mx-4 md:grid-cols-4">
         {services.map((service) => (
           <Card key={service.name} service={service} />
         ))}
       </div> */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
         {services.map((service) => (
           <CardV2 key={service.name} service={service} />
         ))}

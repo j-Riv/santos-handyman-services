@@ -56,10 +56,10 @@ export function TwoColumns({
         <div className="flex items-center text-left md:px-12 lg:w-1/2">
           <div className="max-w-[570px] ml-0 md:ml-auto">
             <div className="m-4">
-              <h2 className="text-3xl font-semibold md:text-4xl uppercase text-center md:text-left">
+              <h2 className="text-3xl font-semibold text-center uppercase md:text-4xl md:text-left">
                 Build Your <span className="text-sky-700">Idea</span>
               </h2>
-              <p className="mt-2 text-sm  md:text-base">
+              <p className="mt-2 text-sm md:text-base">
                 We provide our handyman services to all Orange County. We take
                 pride in what we do. We're available for all your handyman
                 needs.
@@ -78,18 +78,18 @@ export function TwoColumns({
             </div>
             <button
               onClick={() => scrollTo('#contact')}
-              className="m-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-700 bg-transparent transition duration-150 ease-in-out hover:bg-white hover:border-sky-800 lg:text-xl lg:font-bold  hover:text-sky-800 rounded border border-sky-700 text-sky-700 px-4 sm:px-10 py-2 sm:py-4 text-sm"
+              className="px-4 py-2 m-4 text-sm transition duration-150 ease-in-out bg-transparent border rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-700 hover:bg-white hover:border-sky-800 lg:text-xl lg:font-bold hover:text-sky-800 border-sky-700 text-sky-700 sm:px-10 sm:py-4"
             >
               {callToAction}
             </button>
           </div>
         </div>
         <div
-          className="hidden lg:block lg:w-1/2 relative"
+          className="relative hidden lg:block lg:w-1/2"
           style={{ clipPath: `polygon(10% 0, 100% 0%, 100% 100%, 0 100%)` }}
         >
           <StaticImage
-            className="h-full w-full"
+            className="w-full h-full"
             src="../../images/handyman-square.jpg"
             alt="Handyman"
             placeholder="tracedSVG"
@@ -100,7 +100,7 @@ export function TwoColumns({
         </div>
         <div className="flex lg:hidden h-[300px] relative">
           <StaticImage
-            className="h-auto w-auto"
+            className="w-auto h-auto"
             src="../../images/handyman-square.jpg"
             alt="Handyman"
             placeholder="tracedSVG"

@@ -80,17 +80,12 @@ function classNames(...classes: string[]) {
 
 export function Header() {
   return (
-    <Popover className="relative bg-white z-10">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="flex items-center justify-between border-b-2 border-gray-100 py-6 lg:justify-start lg:space-x-10">
+    <Popover className="relative z-10 bg-white">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6">
+        <div className="flex items-center justify-between py-6 border-b-2 border-gray-100 lg:justify-start lg:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="#">
               <span className="sr-only">Santos Hanyman Services</span>
-              {/* <img
-                className="h-8 w-auto sm:h-10"
-                src="https://tailwindui.com/img/logos/mark.svg?color=blue&shade=600"
-                alt=""
-              /> */}
               <StaticImage
                 className="h-[100px] w-auto"
                 src="../../images/santos-handyman-services.svg"
@@ -101,9 +96,9 @@ export function Header() {
             </a>
           </div>
           <div className="-my-2 -mr-2 lg:hidden">
-            <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+            <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
               <span className="sr-only">Open menu</span>
-              <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+              <Bars3Icon className="w-6 h-6" aria-hidden="true" />
             </Popover.Button>
           </div>
           <Popover.Group as="nav" className="hidden space-x-10 lg:flex">
@@ -135,17 +130,17 @@ export function Header() {
                     leaveFrom="opacity-100 translate-y-0"
                     leaveTo="opacity-0 translate-y-1"
                   >
-                    <Popover.Panel className="absolute z-10 -ml-4 mt-3 w-screen max-w-md transform px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2">
+                    <Popover.Panel className="absolute z-10 w-screen max-w-md px-2 mt-3 -ml-4 transform sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2">
                       <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                        <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                        <div className="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
                           {services.map((item) => (
                             <a
                               key={item.name}
                               href={item.href}
-                              className="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50"
+                              className="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-50"
                             >
                               <item.icon
-                                className="h-6 w-6 flex-shrink-0 text-blue-600"
+                                className="flex-shrink-0 w-6 h-6 text-blue-600"
                                 aria-hidden="true"
                               />
                               <div className="ml-4">
@@ -159,15 +154,15 @@ export function Header() {
                             </a>
                           ))}
                         </div>
-                        <div className="space-y-6 bg-gray-50 px-5 py-5 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
+                        <div className="px-5 py-5 space-y-6 bg-gray-50 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
                           {callsToAction.map((item) => (
                             <div key={item.name} className="flow-root">
                               <a
                                 href={item.href}
-                                className="-m-3 flex items-center rounded-md p-3 text-base font-medium text-gray-900 hover:bg-gray-100"
+                                className="flex items-center p-3 -m-3 text-base font-medium text-gray-900 rounded-md hover:bg-gray-100"
                               >
                                 <item.icon
-                                  className="h-6 w-6 flex-shrink-0 text-gray-400"
+                                  className="flex-shrink-0 w-6 h-6 text-gray-400"
                                   aria-hidden="true"
                                 />
                                 <span className="ml-3">{item.name}</span>
@@ -223,17 +218,17 @@ export function Header() {
                     leaveFrom="opacity-100 translate-y-0"
                     leaveTo="opacity-0 translate-y-1"
                   >
-                    <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen max-w-md -translate-x-1/2 transform px-2 sm:px-0">
+                    <Popover.Panel className="absolute z-10 w-screen max-w-md px-2 mt-3 transform -translate-x-1/2 left-1/2 sm:px-0">
                       <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                        <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                        <div className="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
                           {resources.map((item) => (
                             <a
                               key={item.name}
                               href={item.href}
-                              className="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50"
+                              className="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-50"
                             >
                               <item.icon
-                                className="h-6 w-6 flex-shrink-0 text-blue-600"
+                                className="flex-shrink-0 w-6 h-6 text-blue-600"
                                 aria-hidden="true"
                               />
                               <div className="ml-4">
@@ -247,7 +242,7 @@ export function Header() {
                             </a>
                           ))}
                         </div>
-                        <div className="bg-gray-50 px-5 py-5 sm:px-8 sm:py-8">
+                        <div className="px-5 py-5 bg-gray-50 sm:px-8 sm:py-8">
                           <div>
                             <h3 className="text-base font-medium text-gray-500">
                               Recent Posts
@@ -256,7 +251,7 @@ export function Header() {
                               {recentPosts.map((post) => (
                                 <li
                                   key={post.id}
-                                  className="truncate text-base"
+                                  className="text-base truncate"
                                 >
                                   <a
                                     href={post.href}
@@ -285,17 +280,17 @@ export function Header() {
               )}
             </Popover> */}
           </Popover.Group>
-          <div className="hidden items-center justify-end lg:flex lg:flex-1 lg:w-0">
+          <div className="items-center justify-end hidden lg:flex lg:flex-1 lg:w-0">
             <span
               //href="#"
-              className="cursor-pointer whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
+              className="text-base font-medium text-gray-500 cursor-pointer whitespace-nowrap hover:text-gray-900"
               onClick={() => scrollTo('#contact')}
             >
               Request Service
             </span>
             <span
               //href="#"
-              className="cursor-pointer ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-sky-700 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-sky-800"
+              className="inline-flex items-center justify-center px-4 py-2 ml-8 text-base font-medium text-white border border-transparent rounded-md shadow-sm cursor-pointer whitespace-nowrap bg-sky-700 hover:bg-sky-800"
               onClick={() => scrollTo('#contact')}
             >
               Get a Quote
@@ -315,22 +310,22 @@ export function Header() {
       >
         <Popover.Panel
           focus
-          className="absolute inset-x-0 top-0 origin-top-right transform p-2 transition lg:hidden"
+          className="absolute inset-x-0 top-0 p-2 transition origin-top-right transform lg:hidden"
         >
-          <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+          <div className="bg-white divide-y-2 rounded-lg shadow-lg divide-gray-50 ring-1 ring-black ring-opacity-5">
             <div className="px-5 pt-5 pb-6">
               <div className="flex items-center justify-between">
                 <div>
                   <img
-                    className="h-8 w-auto"
+                    className="w-auto h-8"
                     src="https://tailwindui.com/img/logos/mark.svg?color=blue&shade=600"
                     alt="Your Company"
                   />
                 </div>
                 <div className="-mr-2">
-                  <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                  <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
                     <span className="sr-only">Close menu</span>
-                    <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                    <XMarkIcon className="w-6 h-6" aria-hidden="true" />
                   </Popover.Button>
                 </div>
               </div>
@@ -340,10 +335,10 @@ export function Header() {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
+                      className="flex items-center p-3 -m-3 rounded-md hover:bg-gray-50"
                     >
                       <item.icon
-                        className="h-6 w-6 flex-shrink-0 text-blue-600"
+                        className="flex-shrink-0 w-6 h-6 text-blue-600"
                         aria-hidden="true"
                       />
                       <span className="ml-3 text-base font-medium text-gray-900">
@@ -354,7 +349,7 @@ export function Header() {
                 </nav>
               </div>
             </div>
-            <div className="space-y-6 py-6 px-5">
+            <div className="px-5 py-6 space-y-6">
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                 <a
                   href="#"
@@ -382,13 +377,13 @@ export function Header() {
               <div>
                 <a
                   href="#"
-                  className="flex w-full items-center justify-center rounded-md border border-transparent bg-sky-700 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-blue-700"
+                  className="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white border border-transparent rounded-md shadow-sm bg-sky-700 hover:bg-blue-700"
                 >
                   Request Service
                 </a>
                 <a
                   href="#"
-                  className="flex w-full items-center justify-center mt-6 text-center text-base font-medium text-gray-500"
+                  className="flex items-center justify-center w-full mt-6 text-base font-medium text-center text-gray-500"
                 >
                   Get A Quote
                 </a>

@@ -4,9 +4,9 @@ import { StaticImage } from 'gatsby-plugin-image';
 export function Footer() {
   return (
     <footer className="p-4 bg-slate-100 sm:p-6">
-      <div className="mx-auto max-w-7xl px-4">
+      <div className="px-4 mx-auto max-w-7xl">
         <div className="md:flex md:justify-between">
-          <div className="md:flex-1 mb-6 md:mb-0">
+          <div className="mb-6 md:flex-1 md:mb-0">
             <span className="sr-only">Santos Hanyman Services</span>
             <StaticImage
               className="h-[150px] w-auto"
@@ -16,7 +16,7 @@ export function Footer() {
               objectFit="contain"
             />
           </div>
-          <div className="md:flex-1 grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+          <div className="grid grid-cols-2 gap-8 md:flex-1 sm:gap-6 sm:grid-cols-3">
             <div>
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">
                 Resources

@@ -10,24 +10,24 @@ export function Hero() {
     <div className="relative bg-cover bg-center bg-no-repeat bg-[url('/hero.jpg')]">
       <div className="flex justify-center items-center min-h-[350px] md:min-h-[700px] bg-white/[.4]">
         <div className="hero__inner">
-          <div className="container mx-auto flex flex-col items-center py-12 sm:py-24 hero__divider">
-            <div className="w-11/12 sm:w-2/3 lg:flex justify-center items-center flex-col  mb-5 sm:mb-10">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center uppercase font-semibold leading-7 md:leading-10 mb-10">
+          <div className="container flex flex-col items-center py-12 mx-auto sm:py-24 hero__divider">
+            <div className="flex-col items-center justify-center w-11/12 mb-5 sm:w-2/3 lg:flex sm:mb-10">
+              <h2 className="mb-10 text-2xl font-semibold leading-7 text-center uppercase sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl md:leading-10">
                 {headline}
               </h2>
               <div className="text-center"></div>
-              <p className="mt-2 lg:w-10/12 text-black font-normal text-center text-sm sm:text-lg">
+              <p className="mt-2 text-sm font-normal text-center text-black lg:w-10/12 sm:text-lg">
                 {subtext}
               </p>
             </div>
-            <div className="flex justify-center items-center">
+            <div className="flex items-center justify-center">
               <button
                 onClick={() => scrollTo('#services')}
-                className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700 bg-sky-700 transition duration-150 ease-in-out hover:bg-sky-800 lg:text-xl lg:font-bold  rounded text-white px-4 sm:px-10 border border-blue-700 py-2 sm:py-4 text-sm"
+                className="px-4 py-2 text-sm text-white transition duration-150 ease-in-out border border-blue-700 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700 bg-sky-700 hover:bg-sky-800 lg:text-xl lg:font-bold sm:px-10 sm:py-4"
               >
                 Services
               </button>
-              <button className="ml-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700 bg-transparent transition duration-150 ease-in-out hover:bg-white hover:border-sky-700 lg:text-xl lg:font-bold  hover:text-sky-700 rounded border border-blue-700 text-sky-700 px-4 sm:px-10 py-2 sm:py-4 text-sm">
+              <button className="px-4 py-2 ml-4 text-sm transition duration-150 ease-in-out bg-transparent border border-blue-700 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700 hover:bg-white hover:border-sky-700 lg:text-xl lg:font-bold hover:text-sky-700 text-sky-700 sm:px-10 sm:py-4">
                 Call Us
               </button>
             </div>
