@@ -13,9 +13,9 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
-
 import { BsTools } from 'react-icons/bs';
 import { GiHammerNails } from 'react-icons/gi';
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
 const services = [
   {
@@ -82,7 +82,7 @@ export function Header() {
   return (
     <Popover className="relative bg-white z-10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="flex items-center justify-between border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
+        <div className="flex items-center justify-between border-b-2 border-gray-100 py-6 lg:justify-start lg:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="#">
               <span className="sr-only">Santos Hanyman Services</span>
@@ -93,20 +93,20 @@ export function Header() {
               /> */}
               <StaticImage
                 className="h-[100px] w-auto"
-                src="../../images/house-logo.png"
+                src="../../images/santos-handyman-services.svg"
                 alt="Logo"
                 placeholder="tracedSVG"
                 objectFit="contain"
               />
             </a>
           </div>
-          <div className="-my-2 -mr-2 md:hidden">
+          <div className="-my-2 -mr-2 lg:hidden">
             <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
               <span className="sr-only">Open menu</span>
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
           </div>
-          <Popover.Group as="nav" className="hidden space-x-10 md:flex">
+          <Popover.Group as="nav" className="hidden space-x-10 lg:flex">
             <Popover className="relative">
               {({ open }) => (
                 <>
@@ -285,19 +285,21 @@ export function Header() {
               )}
             </Popover> */}
           </Popover.Group>
-          <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-            <a
-              href="#"
-              className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
+          <div className="hidden items-center justify-end lg:flex lg:flex-1 lg:w-0">
+            <span
+              //href="#"
+              className="cursor-pointer whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
+              onClick={() => scrollTo('#contact')}
             >
               Request Service
-            </a>
-            <a
-              href="#"
-              className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-blue-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-blue-700"
+            </span>
+            <span
+              //href="#"
+              className="cursor-pointer ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-sky-700 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-sky-800"
+              onClick={() => scrollTo('#contact')}
             >
               Get a Quote
-            </a>
+            </span>
           </div>
         </div>
       </div>
@@ -313,7 +315,7 @@ export function Header() {
       >
         <Popover.Panel
           focus
-          className="absolute inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden"
+          className="absolute inset-x-0 top-0 origin-top-right transform p-2 transition lg:hidden"
         >
           <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
             <div className="px-5 pt-5 pb-6">
@@ -380,7 +382,7 @@ export function Header() {
               <div>
                 <a
                   href="#"
-                  className="flex w-full items-center justify-center rounded-md border border-transparent bg-blue-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-blue-700"
+                  className="flex w-full items-center justify-center rounded-md border border-transparent bg-sky-700 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-blue-700"
                 >
                   Request Service
                 </a>

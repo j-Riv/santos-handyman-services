@@ -1,7 +1,7 @@
 import * as React from 'react';
 import type { HeadFC } from 'gatsby';
 
-import { Hero, Services } from '../components';
+import { Hero, Services, Banner, TwoColumns, Contact } from '../components';
 
 const IndexPage = () => {
   return (
@@ -10,6 +10,9 @@ const IndexPage = () => {
       <div className="container mx-auto">
         <Services />
       </div>
+      <Banner />
+      <TwoColumns />
+      <Contact />
     </div>
   );
 };

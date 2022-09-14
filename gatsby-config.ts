@@ -39,6 +39,7 @@ const config: GatsbyConfig = {
         path: `./src/data/`,
       },
     },
+    'gatsby-plugin-smoothscroll',
   ],
 };
 

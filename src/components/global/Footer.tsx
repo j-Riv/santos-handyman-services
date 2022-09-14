@@ -3,20 +3,20 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 export function Footer() {
   return (
-    <footer className="p-4 bg-white sm:p-6">
+    <footer className="p-4 bg-slate-100 sm:p-6">
       <div className="mx-auto max-w-7xl px-4">
         <div className="md:flex md:justify-between">
-          <div className="mb-6 md:mb-0">
+          <div className="md:flex-1 mb-6 md:mb-0">
             <span className="sr-only">Santos Hanyman Services</span>
             <StaticImage
               className="h-[150px] w-auto"
-              src="../../images/house-logo.png"
+              src="../../images/santos-handyman-services-square.svg"
               alt="Logo"
               placeholder="tracedSVG"
               objectFit="contain"
             />
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+          <div className="md:flex-1 grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">
                 Resources
