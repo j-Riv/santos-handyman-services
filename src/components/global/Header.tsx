@@ -133,6 +133,7 @@ function classNames(...classes: string[]) {
 }
 
 export function Header({ path }: { path: string }) {
+  console.log('PATH', path);
   return (
     <Popover className="relative z-10 bg-white">
       <div className="px-4 mx-auto max-w-7xl sm:px-6">
@@ -263,40 +264,27 @@ export function Header({ path }: { path: string }) {
             </Link>
           </Popover.Group>
           <div className="items-center justify-end hidden lg:flex lg:flex-1 lg:w-0">
-            {path === '/' && (
-              <>
-                <a
-                  href="#"
-                  className="text-base font-medium text-gray-500 cursor-pointer whitespace-nowrap hover:text-gray-900"
-                  onClick={() => scrollTo('#contact')}
-                >
-                  Request Service
-                </a>
-                <a
-                  href="#"
-                  className="inline-flex items-center justify-center px-4 py-2 ml-8 text-base font-medium text-white border border-transparent rounded-md shadow-sm cursor-pointer whitespace-nowrap bg-sky-700 hover:bg-sky-800"
-                  onClick={() => scrollTo('#contact')}
-                >
-                  Get a Quote
-                </a>
-              </>
+            {path === '/' ? (
+              <span
+                className="text-base font-medium text-gray-500 cursor-pointer whitespace-nowrap hover:text-gray-900"
+                onClick={() => scrollTo('#contact')}
+              >
+                Request Service
+              </span>
+            ) : (
+              <Link
+                to="/#contact"
+                className="text-base font-medium text-gray-500 cursor-pointer whitespace-nowrap hover:text-gray-900"
+              >
+                Request Service
+              </Link>
             )}
-            {path !== '/' && (
-              <>
-                <Link
-                  to="/#contact"
-                  className="text-base font-medium text-gray-500 cursor-pointer whitespace-nowrap hover:text-gray-900"
-                >
-                  Request Service
-                </Link>
-                <Link
-                  to="/#contact"
-                  className="inline-flex items-center justify-center px-4 py-2 ml-8 text-base font-medium text-white border border-transparent rounded-md shadow-sm cursor-pointer whitespace-nowrap bg-sky-700 hover:bg-sky-800"
-                >
-                  Get a Quote
-                </Link>
-              </>
-            )}
+            <a
+              href={`tel:${process.env.GATSBY_PHONE}`}
+              className="inline-flex items-center justify-center px-4 py-2 ml-8 text-base font-medium text-white border border-transparent rounded-md shadow-sm cursor-pointer whitespace-nowrap bg-sky-700 hover:bg-sky-800"
+            >
+              Get a Quote
+            </a>
           </div>
         </div>
       </div>
@@ -383,8 +371,7 @@ export function Header({ path }: { path: string }) {
                 </div>
                 <div>
                   {path === '/' ? (
-                    <a
-                      href="/#"
+                    <span
                       className="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white border border-transparent rounded-md shadow-sm bg-sky-700 hover:bg-sky-800"
                       onClick={() => {
                         close();
@@ -392,7 +379,7 @@ export function Header({ path }: { path: string }) {
                       }}
                     >
                       Request Service
-                    </a>
+                    </span>
                   ) : (
                     <Link
                       to="/#contact"

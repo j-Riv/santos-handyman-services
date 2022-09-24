@@ -78,7 +78,7 @@ export function TwoColumns({
             </div>
             <button
               onClick={() => scrollTo('#contact')}
-              className="px-4 py-2 m-4 text-sm transition duration-150 ease-in-out bg-transparent border rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-700 hover:bg-white hover:border-sky-800 lg:text-xl lg:font-bold hover:text-sky-800 border-sky-700 text-sky-700 sm:px-10 sm:py-4"
+              className="block px-4 py-2 mx-auto my-4 text-sm text-center transition duration-150 ease-in-out bg-transparent border rounded lg:mx-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-700 hover:bg-white hover:border-sky-800 lg:text-xl lg:font-bold hover:text-sky-800 border-sky-700 text-sky-700 sm:px-10 sm:py-4"
             >
               {callToAction}
             </button>

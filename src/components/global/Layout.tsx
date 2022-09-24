@@ -11,7 +11,7 @@ export function Layout({
 }) {
   return (
     <div className="">
-      <Header path={location.path} />
+      <Header path={location.pathname} />
       <main role="main" id="mainContent">
         {children}
       </main>
