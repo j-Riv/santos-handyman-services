@@ -27,9 +27,12 @@ export function Hero() {
               >
                 Services
               </button>
-              <button className="px-4 py-2 ml-4 text-sm transition duration-150 ease-in-out bg-transparent border border-blue-700 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700 hover:bg-white hover:border-sky-700 lg:text-xl lg:font-bold hover:text-sky-700 text-sky-700 sm:px-10 sm:py-4">
+              <a
+                href={`tel:${process.env.GATSBY_PHONE}`}
+                className="block px-4 py-2 mx-auto ml-4 text-sm transition duration-150 ease-in-out bg-transparent border border-blue-700 rounded w-max focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700 hover:bg-white hover:border-sky-700 lg:text-xl lg:font-bold hover:text-sky-700 text-sky-700 sm:px-10 sm:py-4"
+              >
                 Call Us
-              </button>
+              </a>
             </div>
           </div>
         </div>
