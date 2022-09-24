@@ -2,10 +2,16 @@ import React, { ReactNode } from 'react';
 import { Header } from './Header';
 import { Footer } from './Footer';
 
-export function Layout({ children }: { children: ReactNode }) {
+export function Layout({
+  location,
+  children,
+}: {
+  location: any;
+  children: ReactNode;
+}) {
   return (
     <div className="">
-      <Header />
+      <Header path={location.path} />
       <main role="main" id="mainContent">
         {children}
       </main>

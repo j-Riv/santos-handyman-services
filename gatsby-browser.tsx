@@ -5,6 +5,7 @@ import { Layout } from './src/components/';
 
 export const wrapPageElement: GatsbyBrowser['wrapPageElement'] = ({
   element,
+  props,
 }) => {
-  return <Layout>{element}</Layout>;
+  return <Layout {...props}>{element}</Layout>;
 };

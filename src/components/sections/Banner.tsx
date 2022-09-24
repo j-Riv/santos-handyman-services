@@ -18,11 +18,16 @@ export function Banner({
   return (
     <section className="relative bg-slate-100 min-h-[300px] flex justify-content items-center">
       <div className="container mx-auto text-center">
-        <h2 className="my-4 text-5xl font-semibold uppercase">{title}</h2>
+        <h2 className="my-4 text-5xl font-semibold uppercase max-w-[80%] mx-auto">
+          {title}
+        </h2>
         <div className="text-xl">{content}</div>
-        <button className="px-4 py-2 mt-4 text-sm text-white transition duration-150 ease-in-out border border-blue-700 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700 bg-sky-700 hover:bg-sky-800 lg:text-xl lg:font-bold sm:px-10 sm:py-4">
+        <a
+          href={`tel:${process.env.GATSBY_PHONE}`}
+          className="block px-4 py-2 mx-auto mt-4 text-sm text-white transition duration-150 ease-in-out border border-blue-700 rounded w-max focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700 bg-sky-700 hover:bg-sky-800 lg:text-xl lg:font-bold sm:px-10 sm:py-4"
+        >
           {callToAction}
-        </button>
+        </a>
       </div>
     </section>
   );

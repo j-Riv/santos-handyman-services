@@ -49,18 +49,6 @@ const services = [
 
 function Card({ service }: { service: { name: string; icon: IconType } }) {
   return (
-    <div className="flex flex-col items-center justify-center gap-4 p-4 border border-blue-600 rounded-md hover:cursor-pointer hover:bg-slate-100">
-      <service.icon
-        className="flex-1 flex justify-center items-center h-[50px] w-[50px] flex-shrink-0 text-blue-600 fill-sky-700 stroke-sky-700"
-        aria-hidden="true"
-      />
-      <p className="flex items-center justify-center flex-1">{service.name}</p>
-    </div>
-  );
-}
-
-function CardV2({ service }: { service: { name: string; icon: IconType } }) {
-  return (
     <div className="flex flex-col items-center justify-center gap-4 m-4 border rounded-md drop-shadow-md md:flex-row hover:cursor-pointer hover:bg-slate-100">
       <div className="flex items-center justify-center flex-1 w-full py-4 rounded-t-md md:rounded-tl-md md:rounded-bl-md bg-slate-100">
         <service.icon
@@ -81,14 +69,9 @@ export function Services() {
       <h2 className="my-4 text-5xl font-semibold text-center uppercase">
         Services
       </h2>
-      {/* <div className="grid grid-cols-2 gap-6 mx-4 md:grid-cols-4">
-        {services.map((service) => (
-          <Card key={service.name} service={service} />
-        ))}
-      </div> */}
       <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
         {services.map((service) => (
-          <CardV2 key={service.name} service={service} />
+          <Card key={service.name} service={service} />
         ))}
       </div>
     </section>
