@@ -1,13 +1,19 @@
 import * as React from 'react';
 import type { HeadFC } from 'gatsby';
 
+import { Hero, Services, Banner, TwoColumns, Contact } from '../components';
+
 const IndexPage = () => {
   return (
-    <main className="mx-auto max-w-[80%]">
-      <h1 className="text-3xl font-bold underline text-center">
-        Santos Handyman Services
-      </h1>
-    </main>
+    <div className="index-page">
+      <Hero />
+      <div className="container mx-auto">
+        <Services />
+      </div>
+      <Banner />
+      <TwoColumns />
+      <Contact />
+    </div>
   );
 };
 
