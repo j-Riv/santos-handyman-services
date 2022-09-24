@@ -1,19 +1,28 @@
 import * as React from 'react';
 import type { HeadFC } from 'gatsby';
 
-import { Hero, Services, Banner, TwoColumns, Contact } from '../components';
+import {
+  Hero,
+  Services,
+  Banner,
+  TwoColumns,
+  Contact,
+  Layout,
+} from '../components';
 
-const IndexPage = () => {
+const IndexPage = ({ location }: { location: any }) => {
   return (
-    <div className="index-page">
-      <Hero />
-      <div className="container mx-auto">
-        <Services />
+    <Layout location={location}>
+      <div className="index-page">
+        <Hero />
+        <div className="container mx-auto">
+          <Services />
+        </div>
+        <Banner />
+        <TwoColumns />
+        <Contact />
       </div>
-      <Banner />
-      <TwoColumns />
-      <Contact />
-    </div>
+    </Layout>
   );
 };
 

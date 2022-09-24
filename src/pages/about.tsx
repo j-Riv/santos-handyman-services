@@ -1,11 +1,14 @@
 import * as React from 'react';
 import type { HeadFC } from 'gatsby';
+import { Layout } from '../components';
 
-const AboutPage = () => {
+const AboutPage = ({ location }: { location: any }) => {
   return (
-    <div className="container mx-auto about-page">
-      <div className="text-center h-[300px]">Coming Soon...</div>
-    </div>
+    <Layout location={location}>
+      <div className="container mx-auto my-4 about-page">
+        <div className="text-center h-[300px]">Coming Soon...</div>
+      </div>
+    </Layout>
   );
 };
 

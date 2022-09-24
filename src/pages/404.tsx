@@ -1,20 +1,7 @@
 import * as React from 'react';
 import { Link, HeadFC } from 'gatsby';
+import { Layout } from '../components';
 
-const pageStyles = {
-  color: '#232129',
-  padding: '96px',
-  fontFamily: '-apple-system, Roboto, sans-serif, serif',
-};
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-};
-
-const paragraphStyles = {
-  marginBottom: 48,
-};
 const codeStyles = {
   color: '#8A6534',
   padding: 4,
@@ -23,24 +10,35 @@ const codeStyles = {
   borderRadius: 4,
 };
 
-const NotFoundPage = () => {
+const NotFoundPage = ({ location }: { location: any }) => {
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry 😔, we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === 'development' ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
+    <Layout location={location}>
+      <div className="container mx-auto text-center min-h-[300px] my-4">
+        <h1 className="mb-4 text-3xl font-bold text-center uppercase">
+          Page not found
+        </h1>
+        <p className="text-center">
+          Sorry 😔, we couldn’t find what you were looking for. Feel free to{' '}
+          <Link to="/#contact" className="underline">
+            contact
+          </Link>{' '}
+          us with any questions.
+          <br />
+          {process.env.NODE_ENV === 'development' ? (
+            <>
+              <br />
+              Try creating a page in <code style={codeStyles}>src/pages/</code>.
+              <br />
+            </>
+          ) : null}
+          <br />
+          <Link to="/" className="underline">
+            Go home
+          </Link>
+          .
+        </p>
+      </div>
+    </Layout>
   );
 };
 
