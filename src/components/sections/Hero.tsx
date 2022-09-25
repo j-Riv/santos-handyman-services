@@ -10,7 +10,7 @@ export function Hero() {
   return (
     <div className="relative min-h-[350px] md:min-h-[700px]">
       <StaticImage
-        className="absolute w-full h-full"
+        className="!absolute w-full h-full"
         src="../../images/hero.jpg"
         alt="Logo"
         placeholder="tracedSVG"
