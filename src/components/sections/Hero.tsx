@@ -16,10 +16,6 @@ export function Hero() {
         placeholder="tracedSVG"
         objectFit="cover"
         objectPosition="50% 50%"
-        imgStyle-={{
-          height: '100%',
-          width: '100%',
-        }}
       />
 
       <div className="absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center min-h-[350px] md:min-h-[700px] bg-white/[.4]">
