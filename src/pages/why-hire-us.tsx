@@ -15,5 +15,8 @@ const WhyUsPage = ({ location }: { location: any }) => {
 export default WhyUsPage;
 
 export const Head: HeadFC = () => (
-  <title>Why Hire Us? | Santos Handyman Services</title>
+  <>
+    <title>Why Hire Us? | Santos Handyman Services</title>
+    <meta name="description" content="Coming Soon ..." />
+  </>
 );

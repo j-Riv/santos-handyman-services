@@ -15,5 +15,8 @@ const AboutPage = ({ location }: { location: any }) => {
 export default AboutPage;
 
 export const Head: HeadFC = () => (
-  <title>About | Santos Handyman Services</title>
+  <>
+    <title>About | Santos Handyman Services</title>
+    <meta name="description" content="Coming Soon ..." />
+  </>
 );
