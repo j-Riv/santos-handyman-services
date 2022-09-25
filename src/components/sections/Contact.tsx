@@ -13,7 +13,7 @@ export function Contact() {
               </h2>
               <p className="text-base leading-relaxed text-body-color mb-9">
                 Let us know what your projects are, and we'll provide a free
-                estimate. Then, you can let us know if you'de like us to come
+                estimate. Then, you can let us know if you'd like us to come
                 out.
               </p>
             </div>
