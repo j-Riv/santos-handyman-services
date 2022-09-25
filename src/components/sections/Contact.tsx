@@ -8,7 +8,7 @@ export function Contact() {
         <div className="flex flex-wrap">
           <div className="w-full px-4 text-white bg-sky-700 lg:w-1/2">
             <div className="max-w-[570px] h-full mb-12 lg:mb-0 mx-auto lg:mr-0 lg:ml-auto flex flex-col justify-center text-center lg:text-left">
-              <h2 className="text-dark mb-6 uppercase font-semibold text-[32px] sm:text-[40px] lg:text-[36px] xl:text-[40px]">
+              <h2 className="mb-6 text-2xl font-semibold uppercase text-bold md:text-4xl xl:text-5xl">
                 GET IN TOUCH WITH US
               </h2>
               <p className="text-base leading-relaxed text-body-color mb-9">

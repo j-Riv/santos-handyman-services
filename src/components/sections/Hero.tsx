@@ -22,7 +22,7 @@ export function Hero() {
         <div className="hero__inner">
           <div className="container flex flex-col items-center py-12 mx-auto sm:py-24 hero__divider">
             <div className="flex-col items-center justify-center w-11/12 mb-5 sm:w-2/3 lg:flex sm:mb-10">
-              <h2 className="mb-10 text-2xl font-semibold leading-7 text-center uppercase sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl md:leading-10">
+              <h2 className="mb-10 text-2xl font-semibold leading-7 text-center uppercase sm:text-3xl md:text-4xl xl:text-5xl md:leading-10">
                 {headline}
               </h2>
               <div className="text-center"></div>

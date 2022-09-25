@@ -56,7 +56,7 @@ export function TwoColumns({
         <div className="flex items-center text-left md:px-12 lg:w-1/2">
           <div className="max-w-[570px] ml-0 md:ml-auto">
             <div className="m-4">
-              <h2 className="text-3xl font-semibold text-center uppercase md:text-4xl md:text-left">
+              <h2 className="text-2xl font-semibold text-center uppercase md:text-4xl xl:text-5xl md:text-left">
                 Build Your <span className="text-sky-700">Idea</span>
               </h2>
               <p className="mt-2 text-sm md:text-base">

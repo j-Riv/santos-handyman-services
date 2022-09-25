@@ -52,7 +52,7 @@ function Card({ service }: { service: { name: string; icon: IconType } }) {
     <div className="flex flex-col items-center justify-center gap-4 m-4 border rounded-md drop-shadow-md md:flex-row hover:cursor-pointer hover:bg-slate-100">
       <div className="flex items-center justify-center flex-1 w-full py-4 rounded-t-md md:rounded-tl-md md:rounded-bl-md bg-slate-100">
         <service.icon
-          className="h-[50px] w-[50px] flex-shrink-0 text-blue-600 fill-sky-700 stroke-sky-700"
+          className="h-[50px] w-[50px] flex-shrink-0 text-sky-700 fill-sky-700 stroke-sky-700"
           aria-hidden="true"
         />
       </div>
@@ -66,7 +66,7 @@ function Card({ service }: { service: { name: string; icon: IconType } }) {
 export function Services() {
   return (
     <section id="services" className="my-10">
-      <h2 className="my-4 text-2xl font-semibold text-center uppercase lg:text-5xl">
+      <h2 className="my-4 text-2xl font-semibold text-center uppercase md:text-4xl xl:text-5xl">
         Services
       </h2>
       <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
