@@ -307,13 +307,15 @@ export function Header({ path }: { path: string }) {
               <div className="px-5 pt-5 pb-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <StaticImage
-                      className="h-[50px] w-auto"
-                      src="../../images/santos-handyman-services.svg"
-                      alt="Logo"
-                      placeholder="tracedSVG"
-                      objectFit="contain"
-                    />
+                    <Link to="/">
+                      <StaticImage
+                        className="h-[50px] w-auto"
+                        src="../../images/santos-handyman-services.svg"
+                        alt="Logo"
+                        placeholder="tracedSVG"
+                        objectFit="contain"
+                      />
+                    </Link>
                   </div>
                   <div className="-mr-2">
                     <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">

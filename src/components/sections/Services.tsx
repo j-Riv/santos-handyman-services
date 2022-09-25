@@ -66,7 +66,7 @@ function Card({ service }: { service: { name: string; icon: IconType } }) {
 export function Services() {
   return (
     <section id="services" className="my-10">
-      <h2 className="my-4 text-5xl font-semibold text-center uppercase">
+      <h2 className="my-4 text-2xl font-semibold text-center uppercase lg:text-5xl">
         Services
       </h2>
       <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">

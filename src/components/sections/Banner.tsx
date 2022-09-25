@@ -18,7 +18,7 @@ export function Banner({
   return (
     <section className="relative bg-slate-100 min-h-[300px] flex justify-content items-center">
       <div className="container mx-auto text-center">
-        <h2 className="my-4 text-5xl font-semibold uppercase max-w-[80%] mx-auto">
+        <h2 className="my-4 text-2xl lg:text-5xl font-semibold uppercase max-w-[80%] mx-auto">
           {title}
         </h2>
         <div className="text-xl">{content}</div>
