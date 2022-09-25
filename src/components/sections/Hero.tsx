@@ -1,4 +1,5 @@
 import React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 
 const headline = 'What Can we do for you?';
@@ -7,8 +8,21 @@ const subtext =
 
 export function Hero() {
   return (
-    <div className="relative bg-cover bg-center bg-no-repeat bg-[url('/hero.jpg')]">
-      <div className="flex justify-center items-center min-h-[350px] md:min-h-[700px] bg-white/[.4]">
+    <div className="relative min-h-[350px] md:min-h-[700px]">
+      <StaticImage
+        className="absolute w-full h-full"
+        src="../../images/hero.jpg"
+        alt="Logo"
+        placeholder="tracedSVG"
+        objectFit="cover"
+        objectPosition="50% 50%"
+        imgStyle-={{
+          height: '100%',
+          width: '100%',
+        }}
+      />
+
+      <div className="absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center min-h-[350px] md:min-h-[700px] bg-white/[.4]">
         <div className="hero__inner">
           <div className="container flex flex-col items-center py-12 mx-auto sm:py-24 hero__divider">
             <div className="flex-col items-center justify-center w-11/12 mb-5 sm:w-2/3 lg:flex sm:mb-10">
