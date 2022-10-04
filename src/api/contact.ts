@@ -14,10 +14,8 @@ export default async function contactFormHandler(
   res: GatsbyFunctionResponse
 ) {
   if (req.method === `POST`) {
-    console.log('PASS', process.env.GMAIL_APP_PASSWORD);
     try {
       const body = req.body;
-      console.log('BODY', body);
 
       const transporter = nodemailer.createTransport(
         new SMTPTransport({
@@ -26,7 +24,7 @@ export default async function contactFormHandler(
           secure: true,
           auth: {
             user: process.env.GMAIL_ADDRESS,
-            pass: process.env.GMAIL_APP_PASSWORD,
+            pass: process.env.GMAIL_PASSWORD,
           },
         })
       );
