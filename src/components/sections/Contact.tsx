@@ -63,7 +63,6 @@ export function Contact() {
                 }}
                 onSubmit={(values, { setSubmitting, resetForm }) => {
                   try {
-                    console.log('SENDING CONTACT', values);
                     fetch('/api/contact', {
                       method: 'POST',
                       body: JSON.stringify(values),

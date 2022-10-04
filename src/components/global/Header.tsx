@@ -133,7 +133,6 @@ function classNames(...classes: string[]) {
 }
 
 export function Header({ path }: { path: string }) {
-  console.log('PATH', path);
   return (
     <Popover className="relative z-10 bg-white">
       <div className="px-4 mx-auto max-w-7xl sm:px-6">
