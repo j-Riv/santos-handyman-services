@@ -2,6 +2,14 @@ import React from 'react';
 import { Formik } from 'formik';
 
 export function Contact() {
+  const encode = (data: any) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+      )
+      .join('&');
+  };
+
   return (
     <section id="contact" className="relative z-10 overflow-hidden">
       <div className="">
@@ -63,18 +71,17 @@ export function Contact() {
                 }}
                 onSubmit={(values, { setSubmitting, resetForm }) => {
                   try {
-                    fetch('/api/contact', {
+                    fetch('/', {
                       method: 'POST',
-                      body: JSON.stringify(values),
+                      body: encode({ 'form-name': 'contact', ...values }),
                       headers: {
-                        'Content-Type': 'application/json',
+                        'Content-Type': 'application/x-www-form-urlencoded',
                         Accept: 'application/json',
                       },
                     })
-                      .then((response) => response.json())
-                      .then((data) => {
-                        console.log('DATA', data);
-                        setSubmitting(false);
+                      .then(() => {
+                        console.log('SUCCESS');
+                        // setSubmitting(false);
                         resetForm({
                           values: {
                             fullname: '',
@@ -83,6 +90,12 @@ export function Contact() {
                             message: '',
                           },
                         });
+                      })
+                      .catch((err) => {
+                        console.log('ERROR Submitting form', err);
+                      })
+                      .finally(() => {
+                        setSubmitting(false);
                       });
                   } catch (err: any) {
                     console.log('ERROR', err.message);
@@ -100,7 +113,12 @@ export function Contact() {
                   isSubmitting,
                   /* and other goodies */
                 }) => (
-                  <form onSubmit={handleSubmit}>
+                  <form
+                    name="contact"
+                    method="POST"
+                    data-netlify-true="true"
+                    onSubmit={handleSubmit}
+                  >
                     <div className="mb-6">
                       <input
                         type="text"
